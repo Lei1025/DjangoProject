@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/login.css'%}" >
+</head>
+
+<body>
+<div class="container">
+	<section id="content">
+		<form action="{% url 'myapp:register'%}" method='POST'>
+            {% csrf_token %}
+            <h1>Sign Up</h1>
+			<div>
+				<input type="text" placeholder="Username" required="" name="Username" />
+			</div>
+            <div>
+				<input type="text" placeholder="First Name" required="" name="Firstname" />
+			</div>
+            <div>
+				<input type="text" placeholder="Last Name" required="" name="Lastname" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" name="Password1" />
+			</div>
+            <div>
+				<input type="password" placeholder="Password Again" required="" name="Password2" />
+			</div>
+            <div>
+				<input type="emal" placeholder="Email Address" required="" name="Email" />
+			</div>
+            <div>
+				<input type="submit" value="Register" />
+				<a href={% url 'myapp:forgetpassword' %}>Lost your password?</a>
+				<a href="{% url 'myapp:login' %}">Log in</a>
+			</div>
+		</form><!-- form -->
+		<div class="button">
+
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
+</body>
+</html>

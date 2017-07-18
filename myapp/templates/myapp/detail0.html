@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ course.title }}</title>
+</head>
+<body>
+<br>
+    <h2>Details of Course</h2>
+    <p><b>Course Number:</b> {{ course.course_no }}</p>
+    <p><b>Course Title:</b> {{ course.title }}</p>
+    <p><b>Textbook:</b> {{ course.textbook }}</p>
+    <br>
+    <p><a href="{% url 'myapp:index' %}">Back</a></p>
+
+</body>
+</html>

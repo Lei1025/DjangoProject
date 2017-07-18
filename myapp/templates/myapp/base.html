@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    <head>
+      <!--  <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" /> disable CSS style-->
+        <title>Course Listing APP - {% block title %}Welcome!{% endblock %}</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>{% block myhdg %}
+                    {% if request.user.is_authenticated %}
+                        Hello {{ request.user.first_name }}    <a style="font-size:small" href="{% url 'myapp:logout' %}">Log Out</a>
+                        <a style="font-size:small" href="{% url 'myapp:mycourse' %}">My Course</a>
+                    {% else %}
+                        <div style="font-size:small"> <a href="{% url 'myapp:register' %}">Sign up</a> OR  <a href="{% url 'myapp:login' %}">Log in</a></div>
+                        You have not logged in your account.
+                    {% endif %}
+                    {% endblock %}
+            </h1>
+            {% block body_block %}*** {% endblock %}
+        </div>
+        <hr />
+        <div>
+            <li>
+                <li class="hbar1"><a href = "{% url 'myapp:index' %}">Main Page</a></li>
+                <li class="hbar1"><a href="/myapp/about/">About This Site</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

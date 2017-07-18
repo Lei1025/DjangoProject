@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+<body>
+    <h2>Details of Course</h2>
+    <p><b>Course Number:</b> {{ course.course_no }}</p>
+    <p><b>Course Title:</b> {{ course.title }}</p>
+    <p><b>Textbook:</b> {{ course.textbook }}</p>
+    <br>
+    <p><a href="{% url 'myapp:index' %}">Back</a></p>
+
+</body>
+{% endblock %}

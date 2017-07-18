@@ -1,0 +1,23 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+<body>
+    <h2>Details of Topic</h2>
+    <p><b>Subject Name: </b>{{ topic.subject }}
+    {% if topic.intro_course %}
+        --an introductory course</p>
+    {% else %}
+        --not an introductory course</p>
+    {% endif %}
+    <p>As of now, <b>{{ topic.num_responses}}</b> students are intrested in this topic. </p>
+    <p>The average age of people interested in the particular topic is <b>{{ topic.avg_age }}</b></p>
+
+    <form action="{% url 'myapp:topicdetail' topic.subject%}" method='POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+    </form>
+    <br>
+    <p><a href="{% url 'myapp:topics' %}">Back</a></p>
+</body>
+{% endblock %}

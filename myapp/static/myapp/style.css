@@ -1,0 +1,15 @@
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+body{
+    background-color: darkturquoise;
+    color:yellow;
+    font-family:Georgia;
+}
+h1{
+    font-size:150%;
+    color:red;
+    position: absolute;
+    left:inherit;
+    }

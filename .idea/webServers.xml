@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4072d828-af54-4ef2-a2b5-05ea889dafd8" name="UWindsor" url="http://ftp.liu1115c.myweb.cs.uwindsor.ca">
+        <fileTransfer host="ftp.liu1115c.myweb.cs.uwindsor.ca" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
